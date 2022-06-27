@@ -30,12 +30,12 @@ pair<int, int> Map::findMaxTable(vector<pair<int, int>> &tables) const {
     for (pair<int, int> &table : tables) {
         bool swapped = false;
     trySwapping:
-        for (int i = 1; i <= this->length; ++i) {
-            if (table.first + i >= this->length) {
+        for (int i = 0; i <= this->length; ++i) {
+            if (table.first + i > this->length) {
                 continue;
             }
-            for (int j = 1; j <= this->width; ++j) {
-                if (table.second + j >= this->width) {
+            for (int j = 0; j <= this->width; ++j) {
+                if (table.second + j > this->width) {
                     continue;
                 }
                 if (findMaxTableHelper(table, i, j)) {
