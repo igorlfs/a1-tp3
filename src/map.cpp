@@ -57,11 +57,11 @@ pair<int, int> Map::findMaxTable(vector<pair<int, int>> &tables) const {
     return INVALID_PAIR;
 }
 
-bool Map::findMaxTableHelper(const pair<int, int> &table, const int &i,
-                             const int &j) const {
-    for (int ii = i; ii < i + table.first; ++ii) {
-        for (int jj = j; jj < j + table.second; ++jj) {
-            if (this->house[ii][jj] != EMPTY) {
+bool Map::findMaxTableHelper(const pair<int, int> &table, const int &m,
+                             const int &n) const {
+    for (int i = m; i < m + table.first; ++i) {
+        for (int j = n; j < n + table.second; ++j) {
+            if (this->house[i][j] != EMPTY) {
                 return false;
             }
         }

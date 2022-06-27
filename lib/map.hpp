@@ -29,10 +29,10 @@ class Map {
 
     /// @brief verifica se uma mesa cabe na região que começa em (i,j)
     /// @param table, par (comprimento,largura) com o tamanho da mesa
-    /// @param i, abscissa inicial
-    /// @param j, ordenada inicial
-    bool findMaxTableHelper(const pair<int, int> &table, const int &i,
-                            const int &j) const;
+    /// @param m, abscissa inicial
+    /// @param n, ordenada inicial
+    bool findMaxTableHelper(const pair<int, int> &table, const int &m,
+                            const int &n) const;
 
   private:
     int length;
