@@ -6,11 +6,11 @@
 using std::endl;
 
 int main() {
-    Map m;
+    Map house;
     vector<pair<int, int>> tables;
 
     // Leitura da entrada
-    m.readMap();
+    house.readMap();
     tables = Input::readTables();
 
     // Ordena mesas
@@ -26,12 +26,12 @@ int main() {
              return false;
          });
 
-    pair<int, int> p;
+    pair<int, int> maxTable;
 
     // Busca a maior mesa
-    p = m.findMaxTable(tables);
-    assert(p != INVALID_PAIR, "Nenhuma mesa cabe no mapa!");
-    cout << p.first << ' ' << p.second << endl;
+    maxTable = house.findMaxTable(tables);
+    assert(maxTable != INVALID_PAIR, "Nenhuma mesa cabe no mapa!");
+    cout << maxTable.first << ' ' << maxTable.second << endl;
 
     return 0;
 }
